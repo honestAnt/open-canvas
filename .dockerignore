@@ -1,0 +1,15 @@
+.m2
+.idea
+.vscode
+.git
+.gitignore
+.run/
+.next/
+**/target/
+temp/
+builder/
+config/
+helm/
+logs/
+**/node_modules/
+**/dist/

@@ -13,7 +13,7 @@ export interface ToolCall {
   result?: any;
 }
 
-export type Model = "gpt-4o-mini" | string; // Add other model options as needed
+export type Model = "ollama/qwen2.5:0.5b" | string; // Add other model options as needed
 
 export type UserRules = {
   styleRules: string[];

@@ -166,7 +166,13 @@ export const getModelConfig = (
       },
     };
   }
-
+  if (customModelName.includes("ollama")) {
+    // const actualModelName = customModelName.replace("ollama/", "");
+    return {
+      modelName: customModelName,
+      modelProvider: "ollama",
+    };
+  }
   if (customModelName.includes("gpt-")) {
     return {
       modelName: customModelName,
@@ -210,6 +216,7 @@ export async function getModelFromConfig(
 ) {
   const { temperature = 0.5, maxTokens } = extra || {};
   const { modelName, modelProvider, azureConfig } = getModelConfig(config);
+  debugger;
   return await initChatModel(modelName, {
     modelProvider,
     temperature,

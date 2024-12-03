@@ -30,7 +30,7 @@ export const generateTitle = async (
   };
 
   const model = new ChatOpenAI({
-    model: "gpt-4o-mini",
+    model: "ollama/qwen2.5:0.5b",
     temperature: 0,
   }).bindTools([generateTitleTool], {
     tool_choice: "generate_title",
