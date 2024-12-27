@@ -170,7 +170,7 @@ export const getModelConfig = (
     // const actualModelName = customModelName.replace("ollama/", "");
     return {
       modelName: customModelName,
-      modelProvider: "ollama",
+      modelProvider: "openai",
     };
   }
   if (customModelName.includes("gpt-")) {

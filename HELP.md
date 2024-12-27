@@ -27,13 +27,13 @@ WORKDIR /deps/open-canvas
 docker build -t open-canvas:v1 .
 
 
-docker run --env-file .env  -p 57318:8000  -e REDIS_URI="redis://host.docker.internal:6379/0" -e DATABASE_URI="postgresql://opencanvas:opencanvas@host.docker.internal:5432/opencanvas" -e LANGSMITH_API_KEY="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" open-canvas:v1
+docker run --name open-canvas --env-file .env  -p 57318:8000  -e REDIS_URI="redis://host.docker.internal:6379/0" -e DATABASE_URI="postgresql://opencanvas:opencanvas@host.docker.internal:5432/opencanvas" -e LANGSMITH_API_KEY="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" open-canvas:v1
 
 ```
 
 
 
-## 前端启动
+## start ui
 ```bash 
 yarn install
 yarn dev
