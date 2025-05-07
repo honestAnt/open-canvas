@@ -36,8 +36,8 @@ export const AZURE_MODELS = [
 
 export const OPENAI_MODELS = [
   {
-    name: "ollama/qwen2.5:0.5b",
-    label: "qwen2.5:0.5b",
+    name: "gpt-4o",
+    label: "gpt-4o",
     isNew: false,
   },
   {
@@ -78,7 +78,7 @@ export const GEMINI_MODELS = [
     isNew: false,
   },
 ];
-export const DEFAULT_MODEL_NAME: ALL_MODEL_NAMES = "ollama/qwen2.5:0.5b";
+export const DEFAULT_MODEL_NAME: ALL_MODEL_NAMES = "gpt-4o";
 export type OPENAI_MODEL_NAMES = (typeof OPENAI_MODELS)[number]["name"];
 export type ANTHROPIC_MODEL_NAMES = (typeof ANTHROPIC_MODELS)[number]["name"];
 export type FIREWORKS_MODEL_NAMES = (typeof FIREWORKS_MODELS)[number]["name"];

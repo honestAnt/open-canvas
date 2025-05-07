@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createSupabaseClient } from "@/lib/supabase/client";
+// import { createSupabaseClient } from "@/lib/supabase/client";
 import { User } from "@supabase/supabase-js";
 
 export function useUser() {
@@ -12,12 +12,16 @@ export function useUser() {
       return;
     }
 
-    const supabase = createSupabaseClient();
+    // const supabase = createSupabaseClient();
 
-    const {
-      data: { user: supabaseUser },
-    } = await supabase.auth.getUser();
-    setUser(supabaseUser || undefined);
+    // const {
+    //   data: { user: supabaseUser },
+    // } = await supabase.auth.getUser();
+    // setUser(supabaseUser || undefined);
+    setUser({
+      id: "123",
+      name: "asdf"
+    });
     setLoading(false);
   }
 

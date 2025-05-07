@@ -1,3 +1,6 @@
+##接口文档参考
+  https://langchain-ai.github.io/langgraph/cloud/reference/api/api_ref.html#tag/assistants
+
 ## generate dockerfile
 ```bash 
 pip install -U langgraph-cli
@@ -34,6 +37,18 @@ docker run --name open-canvas --env-file .env  -p 57318:8000  -e REDIS_URI="redi
 
 
 ## start ui
+### 如果需要拿掉认证，注释掉下面这个代码
+
+```text
+[text](src/lib/supabase/middleware.ts) 39~78行
+[text](src/hooks/useUser.tsx) 注释 15~20行，并
+    setUser({
+      id: "123",
+      name: "asdf"
+    });
+
+```
+
 ```bash 
 yarn install
 yarn dev
